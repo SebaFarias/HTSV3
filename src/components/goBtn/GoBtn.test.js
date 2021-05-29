@@ -10,6 +10,6 @@ it('Check button render', () => {
 it('correct text', () => {
   const { queryByTitle } = render(<GoBtn/>)
   const btn = queryByTitle('sumbmitBtn')
-  expect(btn.innerHTML).toBe('Ir')
+  expect(btn.textContent).toBe('Ir')
 })
 
