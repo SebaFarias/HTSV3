@@ -11,19 +11,19 @@ const useStyles = makeStyles( theme => ({
   }
 }))
 
-const SubmitBtn = () => {
+const SubmitBtn = ({ label, title='sumbmitBtn' }) => {
 
 const classes = useStyles()
 
 return (
   <Button 
     variant="contained" 
-    title='sumbmitBtn' 
+    title={title} 
     color='primary'
     className={classes.root}
     type='submit'
   >
-    Ir
+    {label}
   </Button>
 )
 }
