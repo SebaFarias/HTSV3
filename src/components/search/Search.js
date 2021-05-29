@@ -12,7 +12,7 @@ const useStyles = makeStyles( theme => ({
   }
 }))
 
-const Search = () => {
+const Search = ({ register }) => {
 
 const classes = useStyles()
 
@@ -21,7 +21,7 @@ return (
     <InputLabel htmlFor="github-user">Usuario de Github</InputLabel>
     <OutlinedInput
       id="github-user"
-      inputProps={{title:'UserInput'}}
+      inputProps={{...register("user"),title:'UserInput',}}
       labelWidth={130}
     />
   </FormControl>

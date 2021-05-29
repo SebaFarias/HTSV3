@@ -1,6 +1,7 @@
 import React from 'react'
 import Search from '../search/Search'
 import GoBtn from '../goBtn/GoBtn'
+import { useForm } from 'react-hook-form'
 import { makeStyles } from '@material-ui/core/styles'
 import {
   Grid,
@@ -15,15 +16,15 @@ const useStyles = makeStyles( theme => ({
 const SearchForm =() => {
 
   const classes = useStyles()
+  const { register, handleSubmit , errors } = useForm()
 
-  const Submit= event => {
-    event.preventDefault()
-    console.log('submitting')
+  const Submit= dataForm => {
+    console.log(dataForm)
   }
 
   return (
     <Grid 
-      onSubmit={Submit}
+      onSubmit={handleSubmit(Submit)}
       component='form' 
       title='SearchForm' 
       justify="center"
@@ -39,7 +40,7 @@ const SearchForm =() => {
         item 
         container
       >
-        <Search/>
+        <Search register={register}/>
       </Grid>
       <Grid 
         xs={12} 
