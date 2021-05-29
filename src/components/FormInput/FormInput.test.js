@@ -2,8 +2,19 @@ import { render, fireEvent } from '@testing-library/react'
 import FormInput from './FormInput.js'
 
 it('Input render Check', () => {
-  const inputTitle= "inputTitle" 
-  const { queryByTitle } = render(<FormInput inputTitle={inputTitle}/>)
+  const inputTitle= "testTitle" 
+  const { queryByTitle } = render(
+  <FormInput 
+    inputData={{ 
+      inputId:'testInputForm', 
+      inputTitle: inputTitle,
+      inputProps: {},
+    }}
+    labelData={{
+      labelTitle: 'labelTitle',
+      labelWidth: 130,
+    }}
+  />)
   const input  = queryByTitle(inputTitle)
   expect(input).toBeTruthy()
 })
