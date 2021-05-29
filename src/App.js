@@ -1,12 +1,10 @@
 import './App.css';
-import GoBtn from './components/goBtn/GoBtn';
-import Search from './components/search/Search'
+import SearchForm from './components/searchForm/SearchForm'
 
 function App() {
   return (
     <>
-      <Search/>
-      <GoBtn/>
+      <SearchForm/>
     </>
   );
 }
