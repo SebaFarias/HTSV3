@@ -16,7 +16,7 @@ const useStyles = makeStyles( theme => ({
 const SearchForm =() => {
 
   const classes = useStyles()
-  const { register, handleSubmit , errors } = useForm()
+  const { register, handleSubmit } = useForm()
 
   const Submit= dataForm => {
     console.log(dataForm)
