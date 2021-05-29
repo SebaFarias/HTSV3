@@ -25,7 +25,7 @@ const UserCard = () => {
   return(
     <Card className={classes.root}>
       <CardMedia
-        image = 'https://avatars.githubusercontent.com/u/53194639?v=4'
+        image = {userData.avatar_url}
         className = {classes.avatar}
       />
     </Card>    
