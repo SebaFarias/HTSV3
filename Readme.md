@@ -1,5 +1,5 @@
-# htsuGrupo4
-<img src='https://raw.githubusercontent.com/nuwe-io/files_storage/main/Hacks/Demium/HTS2.png' />
+# HTS-V3-SebaFarias
+<img src=https://raw.githubusercontent.com/nuwe-io/files_storage/main/Hacks/Demium/Linkedin%20Cover2%20copy.png />
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
@@ -12,6 +12,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#password">Password</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -23,30 +24,32 @@
 
 ### Built With
 
-* [Express](https://expressjs.com/)
+* [React](https://reactjs.org)
 
 ### Prerequisites
 
-* npm
+* yarn
 
 ``` sh
-  npm install npm@latest -g
+  npm install --global yarn
 ```
-
-* a mongoDB instance running
-
+### Password
+As the requirements for the project must be unlocked with 2 passwords, [This file](./password.js) was created. it can be executed by running:
+``` sh
+  yarn password
+```
 ### Installation
 
 1. Clone the repo
 
 ``` sh
-   git clone https://github.com/robredomedina/htsuGrupo4
+   git clone https://github.com/SebaFarias/HTSV3
 ```
 
 2. Install NPM packages
 
 ``` sh
-    npm i
+    yarn install
 ```
 
 3. Create a .env file outside the src folder and set up the following enviroment variables:
@@ -62,10 +65,10 @@
 
 where you want NODE_ENV to be set to development, TOKEN_SECRET to be a sha to be used by jwt and DB_CONN_STR the connection string to your mongo database. The github variables are necessary for the github Oauth and BEARER_TOKEN is necessary to authorize jest tests.
 
-4. Start the server with NPM:
+4. Start the developer server with yarn:
 
 ``` sh
-    npm start
+    yarn start
 ```
 
 ## Usage 

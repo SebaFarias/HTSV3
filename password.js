@@ -1,4 +1,5 @@
 const data = require('./webHTSV3/MOCK_DATA.json')
+const fetch = require("node-fetch");
 let primerNuwe = true
 let pistaUno = 0
 let pistaDos
@@ -22,5 +23,15 @@ data.map(dato => {
   }
 
   }})
-  const password = `${pistaUno}-${pistaDos}-${pistaTres}`
-  console.log(password)
+  const passwordParteUno = `${pistaUno}-${pistaDos}-${pistaTres}`
+
+  const user = 'gagocarrilloedgar'
+  const repoName = 'HTSV2'
+  const url = `https://api.github.com/users/${user}/repos`
+  fetch(url)
+  .then(res => res.json())
+  .then( data=>{
+    console.log('Parte dos: ', data.filter(repo=>repo.name === repoName)[0].id)
+  })
+
+  console.log('Parte uno: ', passwordParteUno)
