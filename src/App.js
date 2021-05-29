@@ -1,9 +1,13 @@
 import './App.css';
+import GoBtn from './components/goBtn/GoBtn';
 import Search from './components/search/Search'
 
 function App() {
   return (
-    <Search/>
+    <>
+      <Search/>
+      <GoBtn/>
+    </>
   );
 }
 
