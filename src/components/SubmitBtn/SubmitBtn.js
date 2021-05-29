@@ -7,24 +7,25 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles( theme => ({
   root:{
     margin: 'auto',
+    
   }
 }))
 
-const GoBtn = () => {
+const SubmitBtn = ({ label, title='sumbmitBtn' }) => {
 
 const classes = useStyles()
 
 return (
   <Button 
     variant="contained" 
-    title='sumbmitBtn' 
+    title={title} 
     color='primary'
     className={classes.root}
     type='submit'
   >
-    Ir
+    {label}
   </Button>
 )
 }
 
-export default GoBtn
+export default SubmitBtn
