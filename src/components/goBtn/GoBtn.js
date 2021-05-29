@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles( theme => ({
   root:{
-    margin: theme.spacing(4),
+    margin: 'auto',
   }
 }))
 
@@ -20,6 +20,7 @@ return (
     title='sumbmitBtn' 
     color='primary'
     className={classes.root}
+    type='submit'
   >
     Ir
   </Button>
