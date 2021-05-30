@@ -8,7 +8,7 @@ import {
 const ReposGrid = () => {
 
   const userData = useContext(GithubUserContext)[0]
-  const [ repos, setRepos ] = useState(userData.repos?userData.repos:[])
+  const repos = useState(userData.repos?userData.repos:[])[0]
 
   return(
   <>
