@@ -13,10 +13,10 @@ const ReposGrid = () => {
   return(
   <>
     {repos && repos.map( repo => {
-      <Paper key={`${repo.name}-${repo.id}`}>
+      return (<Paper key={`${repo.name}-${repo.id}`}>
         <Typography variant='body2' >repo.name</Typography>
       </Paper>
-    })}
+    )})}
   </>)
 }
 
